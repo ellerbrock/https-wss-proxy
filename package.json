@@ -1,0 +1,15 @@
+{
+  "name": "https-proxy",
+  "version": "0.0.1",
+  "description": "A simple https-http proxy that exposes an https interface on the public side and talks to the backend over http",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rajmohan Banavi",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "http-proxy": "^1.13.2"
+  }
+}
