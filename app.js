@@ -77,7 +77,9 @@ wsProxy.on('upgrade', function (req, socket, head) {
     proxy.ws(req, socket, head);
 });
 
-wsProxy.on('proxyReqWs', function(proxyReq, req, socket, options, head) {
+wsProxy.on('proxyReqWs', function (proxyReq, req, socket, options, head) {
+    // http-proxy header names are in lower case including the first character and
+    // some webservers do not like it. So just rewrite the header name to satisfy them.
     proxyReq.setHeader('Host', proxyReq.getHeader('host'));
     proxyReq.setHeader('Upgrade', proxyReq.getHeader('upgrade'));
     proxyReq.setHeader('Connection', proxyReq.getHeader('connection'));
