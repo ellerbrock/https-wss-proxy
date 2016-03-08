@@ -27,7 +27,7 @@ authProxy.on('proxyRes', function (proxyRes, req, res, options) {
     //console.log("This is the location header value: " + proxyRes.headers.location);
     if (proxyRes.headers.location) {
         console.log("Location found, so operating: " + proxyRes.headers.location);
-        proxyRes.headers.location = proxyRes.headers.location.replace("http://10.10.30.240", "https://gw.rajmohan.mitel.com");
+        proxyRes.headers.location = proxyRes.headers.location.replace("http://10.10.30.240", "https://gw.somedomainat.com");
     }
 });
 
